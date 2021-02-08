@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Project Demos</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
 </head>
 <body>
+    <!-- Navigation Bar Section-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="#home" id="navbar__logo"><i class="fas fa-wave-square"></i>Pathfinding Visualizer</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span> 
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                <a href="#about" class="navbar__links" id="about-page">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
     <div class="hero">
         <div class="hero__container">
-            <h1 class="video__header" id="video__header">A* Search</h1>
-            <p class="video__description" id="video__description">Guarantees the shortest path using heuristics and distance calculations. (Weighted)</p>
-            <video class="video__playing" id="video__playing" autoplay loop>
+            <h1 id="video__header">A* Search</h1>
+            <p id="video__description">Guarantees the shortest path using heuristics and distance calculations. (Weighted)</p>
+            <video id="video__playing" autoplay loop>
                 <source src="demo_videos/a_star.webm" type="video/webm">
             </video>
 
             <div class="button__container">
-                <button class="algo__button" onclick="change_content('A* Search','Guarantees the shortest path using heuristics and distance calculations. (Weighted)','a_star.webm')">A* Search</button>
-                <button class="algo__button" onclick="change_content('Dijkstras Algorithm','Guarantees the shortest path using distance calculations. (Weighted)','dijkstras.webm')">Dijkstra's Algorithm</button>
-                <button class="algo__button" onclick="change_content('Greedy Best First Search','Does not guarantee the shortest path, only uses heuristics. (Weighted)','greedy_best_first.webm')">Greedy Best First Search</button>
-                <button class="algo__button" onclick="change_content('Breadth First Search','This is Breadth First Search','breadth_first_search.webm')">Breadth First Search</button>
-                <button class="algo__button" onclick="change_content('Depth First Search','This is Depth First Search','depth_first_search.webm')">Depth First Search</button>
-                <button class="algo__button" onclick="change_content('Prims Maze Generator Algorithm','Generates a maze with one unique solution.','prims.webm')">Prim's Maze Generator Algorithm</button>
+                <button class="algo__button" onclick="change_content('A* Search','Guarantees the shortest path using heuristics and distance calculations. (Weighted)','a_star.webm')"><a>A* Search</a></button>
+                <button class="algo__button" onclick="change_content('Dijkstras Algorithm','Guarantees the shortest path using distance calculations. (Weighted)','dijkstras.webm')"><a>Dijkstra's Algorithm</a></button>
+                <button class="algo__button" onclick="change_content('Greedy Best First Search','Does not guarantee the shortest path, only uses heuristics. (Weighted)','greedy_best_first.webm')"><a>Greedy Best First Search</a></button>
+                <button class="algo__button" onclick="change_content('Breadth First Search','This is Breadth First Search','breadth_first_search.webm')"><a>Breadth First Search</a></button>
+                <button class="algo__button" onclick="change_content('Depth First Search','This is Depth First Search','depth_first_search.webm')"><a>Depth First Search</a></button>
+                <button class="algo__button" onclick="change_content('Prims Algorithm','Generates a maze with one unique solution.','prims.webm')"><a>Prim's Maze Generator Algorithm</a></button>
             </div>
         </div>
     </div>
