@@ -23,18 +23,28 @@
     color: rgb(206, 216, 224);
   }
 
-  .main__button {
-    background-color: #2fb6c0; /* Green */
+  .video__description {
+    text-decoration: none;
+    color: rgb(206, 216, 224);
+  }
+
+  .video__playing {
+    width: auto;
+    height: auto;
+  }
+
+  .algo__button {
+    background: #cf8515;
     border: none;
     color: white;
     padding: 10px 20px;
+    margin-top: 10px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
   }
 
   .hero {
-    background: #000000;
     background: linear-gradient(to right, #161616, #000000);
     padding: 200px 0;
   }
