@@ -1,14 +1,14 @@
 function change_content(title, description, video) {
-    var x = document.getElementById("video_header");
-    var y = document.getElementById("video_description");
-    var z = document.getElementById("video_playing");
-    if (x.innerHTML === title) {
+    var current_title = document.getElementById("video__header");
+    var current_description = document.getElementById("video__description");
+    var current_video = document.getElementById("video__playing");
+    if (current_title.innerHTML === title) {
       return;
     }
     else {
-        x.innerHTML = title;
-        y.innerHTML = description;
-        z.src = "demo_videos/" + video;
+        current_title.innerHTML = title;
+        current_description.innerHTML = description;
+        current_video.src = "demo_videos/" + video;
     }
 }
 
