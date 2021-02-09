@@ -29,19 +29,26 @@
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero__container">
-            <h1 id="video__header">A* Search</h1>
-            <p id="video__description">Guarantees the shortest path using heuristics and distance calculations. (Weighted)</p>
-            <video id="video__playing" autoplay loop>
-                <source src="demo_videos/a_star.webm" type="video/webm">
-            </video>
-
             <div class="button__container">
+                <h1 id="button__header">Choose an algorithm!</h1>
                 <button class="algo__button" onclick="change_content('A* Search','Guarantees the shortest path using heuristics and distance calculations. (Weighted)','a_star.webm')"><a>A* Search</a></button>
                 <button class="algo__button" onclick="change_content('Dijkstras Algorithm','Guarantees the shortest path using distance calculations. (Weighted)','dijkstras.webm')"><a>Dijkstra's Algorithm</a></button>
                 <button class="algo__button" onclick="change_content('Greedy Best First Search','Does not guarantee the shortest path, only uses heuristics. (Weighted)','greedy_best_first.webm')"><a>Greedy Best First Search</a></button>
-                <button class="algo__button" onclick="change_content('Breadth First Search','This is Breadth First Search','breadth_first_search.webm')"><a>Breadth First Search</a></button>
-                <button class="algo__button" onclick="change_content('Depth First Search','This is Depth First Search','depth_first_search.webm')"><a>Depth First Search</a></button>
-                <button class="algo__button" onclick="change_content('Prims Algorithm','Generates a maze with one unique solution.','prims.webm')"><a>Prim's Maze Generator Algorithm</a></button>
+                <button class="algo__button" onclick="change_content('Breadth First Search','Guarantees the shortest path using a queue. (Unweighted)','breadth_first_search.webm')"><a>Breadth First Search</a></button>
+                <button class="algo__button" onclick="change_content('Depth First Search','Does not guarantee the shortest path, uses a stack. (Unweighted)','depth_first_search.webm')"><a>Depth First Search</a></button>
+                <button class="algo__button" onclick="change_content('Prims Algorithm','Generates a maze with one unique solution.','prims.webm')"><a>Prim's Maze Algorithm</a></button>
+            </div>
+
+            <div class="video__container">
+                <h1 id="video__header">A* Search</h1>
+                <p id="video__description">Guarantees the shortest path using heuristics and distance calculations. (Weighted)</p>
+                <video id="video__playing" autoplay loop>
+                    <source src="demo_videos/a_star.webm" type="video/webm">
+                </video>
+                <p id="code__link">Check out the code here!</p>
+                <a id="code__image" href="https://github.com/rJefferyXie/Pathfinding-Visualizer" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a> 
             </div>
         </div>
     </div>

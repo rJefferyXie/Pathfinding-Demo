@@ -8,7 +8,6 @@
 
   .navbar {
     background: #131313;
-    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,18 +20,14 @@
   .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
     padding: 0 50px;
   }
 
   #navbar__logo {
     background-color: #ff8177;
     background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-    background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,7 +61,7 @@
   }
 
   .navbar__links:hover {
-    color: #9518fc;
+    color: #9d54da;
     transition: all 0.3s ease;
   }
 
@@ -78,7 +73,6 @@
       height: 80px;
       z-index: 1;
       width: 100%;
-      max-width: 1300px;
       padding: 0;
     }
   
@@ -154,21 +148,16 @@
 
   .hero {
     background: linear-gradient(to right, #161616, #000000);
-    padding: 200px 0;
   }
 
   .hero__container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 90%;
     text-align: center;
     text-decoration: none;
-    padding: 30px;
-  }
+    padding: 60px;
+    }
 
   #video__header {
     background: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
@@ -185,18 +174,30 @@
 
   #video__playing {
     width: auto;
-    height: auto;
+    height: 100%;
+  }
+
+  #button__header {
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  .button__container {
+    width: 90%;
+    height: 100%;
   }
 
   .algo__button {
     font-size: 1.8rem;
     background: #833ab4;
-    background: -webkit-linear-gradient(to right, #8543ee, #fd1d1d, #833ab4);
-    background: linear-gradient(to right, #8543ee, #16d1d1, #3a8db4);
+    background: -webkit-linear-gradient(to right, #8543ee, #168cd1, #3a8db4);
+    background: linear-gradient(to right, #9054f1, #168cd1, #3a8db4);
     padding: 20px 60px;
     border: none;
-    border-radius: 4px;
-    margin-top: 2rem;
+    width: 60%;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 1rem;
     cursor: pointer;
     position: relative;
     transition: all 0.35s;
@@ -217,9 +218,9 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #5f0cbe;
+    background: #883cdf;
     transition: all 0.35s;
-    border-radius: 4px;
+    border-radius: 6px;
   }
   
   .algo__button:hover {
@@ -230,9 +231,25 @@
     width: 100%;
   }
 
+  #code__link {
+    margin-top: 1rem;
+    color: white;
+  }
+
+  #code__image {
+    color: white;
+    font-size: 1.8rem;
+  }
+
   @media screen and (max-width: 768px) {
     #video__playing {
         width: 90%;
         height: 90%;
+    }
+
+    .algo__button {
+      font-size: 16px;
+      width: auto;
+      height: auto;
     }
   }
