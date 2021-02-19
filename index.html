@@ -12,7 +12,7 @@
     <!-- Navigation Bar Section-->
     <nav class="navbar">
         <div class="navbar__container">
-            <a href="#home" id="navbar__logo"><i class="fas fa-wave-square"></i>Pathfinding Visualizer</a>
+            <a onclick="scroll_to('#hero')" id="navbar__logo"><i class="fas fa-wave-square"></i>Pathfinding Visualizer</a>
             <div class="navbar__toggle" id="mobile-menu">
                 <span class="bar"></span> 
                 <span class="bar"></span>
@@ -20,37 +20,132 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                <a href="#about" class="navbar__links" id="about-page">About</a>
+                    <a onclick="scroll_to('#hero')" class="navbar__links" id="about-page">About</a>
+                </li>
+
+                <li class="navbar__item">
+                    <a href="/" class="navbar__links" id="other-projects">Other Projects</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero">
+    <div id="hero">
         <div class="hero__container">
-            <div class="button__container">
-                <h1 id="button__header">Choose an algorithm!</h1>
-                <button class="algo__button" onclick="change_content('A* Search','Guarantees the shortest path using heuristics and distance calculations. (Weighted)','a_star.webm')"><a>A* Search</a></button>
-                <button class="algo__button" onclick="change_content('Dijkstras Algorithm','Guarantees the shortest path using distance calculations. (Weighted)','dijkstras.webm')"><a>Dijkstra's Algorithm</a></button>
-                <button class="algo__button" onclick="change_content('Greedy Best First Search','Does not guarantee the shortest path, only uses heuristics. (Weighted)','greedy_best_first.webm')"><a>Greedy Best First Search</a></button>
-                <button class="algo__button" onclick="change_content('Breadth First Search','Guarantees the shortest path using a queue. (Unweighted)','breadth_first_search.webm')"><a>Breadth First Search</a></button>
-                <button class="algo__button" onclick="change_content('Depth First Search','Does not guarantee the shortest path, uses a stack. (Unweighted)','depth_first_search.webm')"><a>Depth First Search</a></button>
-                <button class="algo__button" onclick="change_content('Prims Algorithm','Generates a maze with one unique solution.','prims.webm')"><a>Prim's Maze Algorithm</a></button>
-            </div>
-
-            <div class="video__container">
-                <h1 id="video__header">A* Search</h1>
-                <p id="video__description">Guarantees the shortest path using heuristics and distance calculations. (Weighted)</p>
-                <video id="video__playing" autoplay loop>
-                    <source src="demo_videos/a_star.webm" type="video/webm">
-                </video>
-                <p id="code__link">Check out the code here!</p>
-                <a id="code__image" href="https://github.com/rJefferyXie/Pathfinding-Visualizer" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a> 
-            </div>
+            <h1 id="button__header">Choose an algorithm!</h1>
+            <button class="algo__button" onclick="scroll_to('#a_star')"><a>A* Search</a></button>
+            <button class="algo__button" onclick="scroll_to('#dijkstras')"><a>Dijkstra's Algorithm</a></button>
+            <button class="algo__button" onclick="scroll_to('#greedy_best_first')"><a>Greedy Best First Search</a></button>
+            <button class="algo__button" onclick="scroll_to('#breadth_first_search')"><a>Breadth First Search</a></button>
+            <button class="algo__button" onclick="scroll_to('#depth_first_search')"><a>Depth First Search</a></button>
+            <button class="algo__button" onclick="scroll_to('#prims')"><a>Prim's Maze Algorithm</a></button>
+            <p id="code__link">Check out the code here!</p>
+            <a id="code__image" href="https://github.com/rJefferyXie/Pathfinding-Visualizer" target="_blank">
+                <i class="fab fa-github"></i>
+            </a> 
         </div>
+    </div>
+
+    <!-- Algorithm Section -->
+    <div id="algo">
+        <a id="a_star">
+            <div class="algo__container">
+                <div class="text__container">
+                    <h1 id="video__header">A* Search</h1>
+                    <p id="video__description">Guarantees the shortest path using heuristics and distance calculations. (Weighted)</p>
+                    <button class="change__video"><a>Maze Variant</a></button>
+                    <button class="change__video"><a>Open Demo 1</a></button>
+                    <button class="change__video"><a>Open Demo 2</a></button>
+                    <button class="change__video"><a>Open Demo 3</a></button>
+                </div>
+                <video id="video__playing" controls>
+                    <source src="demo_videos/a_star.mp4" type="video/mp4">
+                </video>
+            </div>
+        </a>
+
+        <a id="dijkstras">
+            <div class="algo__container">
+                <video id="video__playing" controls>
+                    <source src="demo_videos/dijkstras.mp4" type="video/mp4">
+                </video>
+                <div class="text__container">
+                    <h1 id="video__header">Dijkstra's Algorithm</h1>
+                    <p id="video__description">Guarantees the shortest path using distance calculations. (Weighted)</p>
+                    <button class="change__video"><a>Maze Variant</a></button>
+                    <button class="change__video"><a>Open Demo 1</a></button>
+                    <button class="change__video"><a>Open Demo 2</a></button>
+                    <button class="change__video"><a>Open Demo 3</a></button>on>
+                </div>
+            </div>
+        </a>
+
+        <a id="greedy_best_first">
+            <div class="algo__container">
+                <div class="text__container">
+                    <h1 id="video__header">Greedy Best First Search</h1>
+                    <p id="video__description">Does not guarantee the shortest path, only uses heuristics. (Weighted)</p>
+                    <button class="change__video"><a>Maze Variant</a></button>
+                    <button class="change__video"><a>Open Demo 1</a></button>
+                    <button class="change__video"><a>Open Demo 2</a></button>
+                    <button class="change__video"><a>Open Demo 3</a></button>
+                </div>
+                <video id="video__playing" controls>
+                    <source src="demo_videos/greedy_best_first.mp4" type="video/mp4">
+                </video>
+            </div>
+        </a>
+
+        <a id="breadth_first_search">
+            <div class="algo__container">
+                <video id="video__playing" controls>
+                    <source src="demo_videos/breadth_first_search.mp4" type="video/mp4">
+                </video>
+                <div class="text__container">
+                    <h1 id="video__header">Breadth First Search</h1>
+                    <p id="video__description">Guarantees the shortest path using a queue. (Unweighted)</p>
+                    <button class="change__video"><a>Maze Variant</a></button>
+                    <button class="change__video"><a>Open Demo 1</a></button>
+                    <button class="change__video"><a>Open Demo 2</a></button>
+                    <button class="change__video"><a>Open Demo 3</a></button>
+                </div>
+            </div>
+        </a>
+
+        <a id="depth_first_search">
+            <div class="algo__container">
+                <div class="text__container">
+                    <h1 id="video__header">Depth First Search</h1>
+                    <p id="video__description">
+                        Depth First Search is a non-weighted algorithm that does not guarantee the shortest path.
+                        The algorithm starts at the root node (the green square in our case) 
+                        and explores as far as possible along each branch before backtracking.
+                        Depth First Search uses LIFO (stack) to hold its next nodes.
+                        The order for traversal is up, right, down, left.
+                    </p>
+                    <button class="change__video"><a>Maze Variant</a></button>
+                    <button class="change__video"><a>Open Demo 1</a></button>
+                    <button class="change__video"><a>Open Demo 2</a></button>
+                    <button class="change__video"><a>Open Demo 3</a></button>
+                </div>
+                <video id="video__playing" controls>
+                    <source src="demo_videos/depth_first_search.mp4" type="video/mp4">
+                </video>
+            </div>
+        </a>
+
+        <a id="prims">
+            <div class="algo__container">
+                <video id="video__playing" controls>
+                    <source src="demo_videos/prims.mp4" type="video/mp4">
+                </video>
+                <div class="text__container">
+                    <h1 id="video__header">Prim's Maze Algorithm</h1>
+                    <p id="video__description">Generates a maze with one unique solution.</p>
+                </div>
+            </div>
+        </a>
     </div>
     <script src="app.js"></script>
 </body>
