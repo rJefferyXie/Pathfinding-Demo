@@ -20,11 +20,22 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
-                    <a onclick="scroll_to('#hero')" class="navbar__links" id="about-page">About</a>
+                    <a onclick="scroll_to('#a_star')" class="navbar__links">A* Search</a>
                 </li>
-
                 <li class="navbar__item">
-                    <a href="/" class="navbar__links" id="other-projects">Other Projects</a>
+                    <a onclick="scroll_to('#dijkstras')" class="navbar__links">Dijkstras</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="scroll_to('#greedy_best_first')" class="navbar__links">Greedy BFS</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="scroll_to('#breadth_first_search')" class="navbar__links">Breadth First</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="scroll_to('#depth_first_search')" class="navbar__links">Depth First</a>
+                </li>
+                <li class="navbar__item">
+                    <a onclick="scroll_to('#prims')" class="navbar__links">Prim's Maze</a>
                 </li>
             </ul>
         </div>
@@ -33,17 +44,32 @@
     <!-- Hero Section -->
     <div id="hero">
         <div class="hero__container">
-            <h1 id="button__header">Choose an algorithm!</h1>
-            <button class="algo__button" onclick="scroll_to('#a_star')"><a>A* Search</a></button>
-            <button class="algo__button" onclick="scroll_to('#dijkstras')"><a>Dijkstra's Algorithm</a></button>
-            <button class="algo__button" onclick="scroll_to('#greedy_best_first')"><a>Greedy Best First Search</a></button>
-            <button class="algo__button" onclick="scroll_to('#breadth_first_search')"><a>Breadth First Search</a></button>
-            <button class="algo__button" onclick="scroll_to('#depth_first_search')"><a>Depth First Search</a></button>
-            <button class="algo__button" onclick="scroll_to('#prims')"><a>Prim's Maze Algorithm</a></button>
-            <p id="code__link">Check out the code here!</p>
-            <a id="code__image" href="https://github.com/rJefferyXie/Pathfinding-Visualizer" target="_blank">
-                <i class="fab fa-github"></i>
-            </a> 
+            <div class="button__container">
+                <button class="algo__button" onclick="scroll_to('#a_star')"><a>A* Search</a></button>
+                <button class="algo__button" onclick="scroll_to('#dijkstras')"><a>Dijkstra's Algorithm</a></button>
+                <button class="algo__button" onclick="scroll_to('#greedy_best_first')"><a>Greedy Best First Search</a></button>
+                <button class="algo__button" onclick="scroll_to('#breadth_first_search')"><a>Breadth First Search</a></button>
+                <button class="algo__button" onclick="scroll_to('#depth_first_search')"><a>Depth First Search</a></button>
+                <button class="algo__button" onclick="scroll_to('#prims')"><a>Prim's Maze Algorithm</a></button>
+            </div>
+            <div class="about__container">
+                <h1 class="about__header">About</h1>
+                <p class="about__description">
+                    A visual pathfinding program that allows the user to create their own obstacles or mazes 
+                    and then run different pathfinding algorithms on it. 
+                </p>
+                <p class="about__description">
+                    This program includes the ability to place weighted path nodes, 
+                    the ability to generate a random maze using Prim's algorithm, 
+                    a results display after each successful path found, 
+                    and five different algorithms to choose from.
+                </p>
+                <p class="about__description">This project was built with inspiration from my introduction to artificial intelligence class, and is meant to be a learning resource
+                    for visualizing how different pathfinding algorithms work.
+                </p>
+                <p id="code__link">Check out the code here!</p>
+                <a id="code__image" href="https://github.com/rJefferyXie/Pathfinding-Visualizer" target="_blank"><i class="fab fa-github"></i></a> 
+            </div>
         </div>
     </div>
 
@@ -57,7 +83,6 @@
                     <button class="change__video"><a>Maze Variant</a></button>
                     <button class="change__video"><a>Open Demo 1</a></button>
                     <button class="change__video"><a>Open Demo 2</a></button>
-                    <button class="change__video"><a>Open Demo 3</a></button>
                 </div>
                 <video id="video__playing" controls>
                     <source src="demo_videos/a_star.mp4" type="video/mp4">
@@ -76,7 +101,6 @@
                     <button class="change__video"><a>Maze Variant</a></button>
                     <button class="change__video"><a>Open Demo 1</a></button>
                     <button class="change__video"><a>Open Demo 2</a></button>
-                    <button class="change__video"><a>Open Demo 3</a></button>on>
                 </div>
             </div>
         </a>
@@ -89,7 +113,6 @@
                     <button class="change__video"><a>Maze Variant</a></button>
                     <button class="change__video"><a>Open Demo 1</a></button>
                     <button class="change__video"><a>Open Demo 2</a></button>
-                    <button class="change__video"><a>Open Demo 3</a></button>
                 </div>
                 <video id="video__playing" controls>
                     <source src="demo_videos/greedy_best_first.mp4" type="video/mp4">
@@ -108,7 +131,6 @@
                     <button class="change__video"><a>Maze Variant</a></button>
                     <button class="change__video"><a>Open Demo 1</a></button>
                     <button class="change__video"><a>Open Demo 2</a></button>
-                    <button class="change__video"><a>Open Demo 3</a></button>
                 </div>
             </div>
         </a>
@@ -127,7 +149,6 @@
                     <button class="change__video"><a>Maze Variant</a></button>
                     <button class="change__video"><a>Open Demo 1</a></button>
                     <button class="change__video"><a>Open Demo 2</a></button>
-                    <button class="change__video"><a>Open Demo 3</a></button>
                 </div>
                 <video id="video__playing" controls>
                     <source src="demo_videos/depth_first_search.mp4" type="video/mp4">
