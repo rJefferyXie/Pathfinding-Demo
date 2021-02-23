@@ -113,6 +113,7 @@
     }
   
     #navbar__logo {
+      font-size: 1.4rem;
       padding-left: 25px;
     }
   
@@ -348,7 +349,7 @@
     }
 
     .button__container {
-      width: 4auto;
+      width: auto;
     }
 
     .about__container {
