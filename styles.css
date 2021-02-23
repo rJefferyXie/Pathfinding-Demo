@@ -343,7 +343,7 @@
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
-      padding-bottom: 11vh;
+      padding-bottom: 7vh;
       height: 95vh;
       width: 100%;
     }
@@ -358,6 +358,7 @@
     }
 
     .about__description {
+      font-size: 12px;
       width: 100%;
     }
 
@@ -367,7 +368,7 @@
 
     .algo__button {
       width: auto;
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding: 10px 25px;
     }
 
